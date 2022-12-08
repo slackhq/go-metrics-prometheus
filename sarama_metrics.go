@@ -1,4 +1,4 @@
-package kafka
+package sarama_metrics
 
 import (
 	"fmt"
