@@ -26,6 +26,6 @@ However we modified the original code in the following ways:
   import "github.com/Shopify/sarama"
 
   metricsRegistry := metrics.NewRegistry()
-  saramaMetricsClient := NewPrometheusProvider(samara.StdLogger, metricsRegistry, "murron", "sarama", prometheus.DefaultRegisterer, 10 * time.Second, "request_size")
+  saramaMetricsClient := sarama_metrics.NewPrometheusProvider(samara.StdLogger, metricsRegistry, "murron", "sarama", prometheus.DefaultRegisterer, 10 * time.Second, "request_size")
   go saramaMetricsClient.UpdatePrometheusMetrics()
 ```
